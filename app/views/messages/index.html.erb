@@ -1,7 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render partial: "messages/form", locals: { message: Message.new } %>
+<div id="new_message">
 
+  <%= render partial: "messages/form", locals: { message: Message.new } %>
+
+</div>
 <h1>Messages</h1>
 
 
@@ -9,7 +12,7 @@
   <% @messages.each do |message| %>
     <%= render message %>
     <p>
-      <%= link_to "Show this message", message %>
+    <%= link_to "Show this message", message %>
     </p>
   <% end %>
 </div>
