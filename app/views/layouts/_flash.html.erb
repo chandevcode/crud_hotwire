@@ -1,0 +1,10 @@
+<div data-controller="autodisable">
+
+  <% flash.each do |key, value| %>
+    <div class="alert alert-success">
+         <%= content_tag :div, value, id: key %>
+    </div>
+  <% end %>
+
+</div>
+

@@ -1,8 +1,12 @@
 <div id="<%= dom_id message %>">
   <p>
-    <strong>Body:</strong>
-    <%= message.body %>
+  <strong>Body:</strong>
+  <%= message.body %>
   </p>
-<%= link_to "show", message %>
-<%= button_to "delete", message_path(message), method: :delete %>
+  <div class="d-flex justify-content-around">
+    <%= link_to "show", message, class: 'btn btn-warning' %>
+    <%= button_to "edit", edit_message_path(message), method: :post, class: 'btn btn-primary'%>
+    <%= button_to "delete", message_path(message), method: :delete, class: 'btn btn-danger' %>
+
+  </div>
 </div>

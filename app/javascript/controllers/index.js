@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import AutodisableController from "./autodisable_controller"
+application.register("autodisable", AutodisableController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
